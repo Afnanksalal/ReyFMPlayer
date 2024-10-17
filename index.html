@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReyFM Music Player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>ReyFM Music Player</h1>
+  </header>
+
+  <div class="content">
+    <audio id="audio" loop></audio>
+    <div class="controls">
+      <select id="streamSelect">
+        <option value="" disabled selected>Choose Station</option>
+      </select>
+      <button id="play"><i class="fas fa-play"></i> Play</button>
+      <button id="stop"><i class="fas fa-stop"></i> Stop</button>
+      <div class="spacer"></div>
+      <div class="volume-control">
+        <i class="fas fa-volume-up"></i>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+      </div>
+    </div>
+
+    <div class="error-popup" id="errorPopup">
+      <i class="fas fa-exclamation-triangle"></i>
+      <p>Please choose a station before playing.</p>
+      <button id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>By Afnan K Salal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
