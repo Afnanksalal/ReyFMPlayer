@@ -171,6 +171,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
+  // Make sure volume progress updates when using browser's default controls
+  volumeSlider.addEventListener('change', function() {
+    volumeProgress.style.width = this.value * 100 + '%';
+  });
+  
   // Initialize volume display
   volumeProgress.style.width = volumeSlider.value * 100 + '%';
   
