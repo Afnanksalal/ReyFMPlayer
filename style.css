@@ -233,6 +233,7 @@ button:focus {
   height: 4.5rem;
   background-color: var(--primary);
   color: white;
+  border-radius: 12px;
 }
 
 #play:hover {
