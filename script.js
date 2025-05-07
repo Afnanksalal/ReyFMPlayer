@@ -15,14 +15,25 @@ document.addEventListener('DOMContentLoaded', function() {
   const previousBtn = document.getElementById('previousBtn');
   const nextBtn = document.getElementById('nextBtn');
   
-  // Sample stations - replace with your actual stations
-  const stations = [
-    { name: "Chill Lounge", url: "http://example.com/stream1" },
-    { name: "Jazz Classics", url: "http://example.com/stream2" },
-    { name: "Rock Hits", url: "http://example.com/stream3" },
-    { name: "Classical Focus", url: "http://example.com/stream4" },
-    { name: "Electronic Beats", url: "http://example.com/stream5" }
-  ];
+  // ReyFM stations
+  const streams = {
+    "Chill": "https://listen.reyfm.de/reyfm-chill/",
+    "Original": "https://listen.reyfm.de/reyfm-original/",
+    "Summer": "https://listen.reyfm.de/reyfm-summer/",
+    "Charts": "https://listen.reyfm.de/reyfm-charts/",
+    "Dance": "https://listen.reyfm.de/reyfm-dance/",
+    "Gaming": "https://listen.reyfm.de/reyfm-gaming/",
+    "Hip-Hop": "https://listen.reyfm.de/reyfm-hip-hop/",
+    "Hip-Hop Gold": "https://listen.reyfm.de/reyfm-hip-hop_gold/",
+    "Hits": "https://listen.reyfm.de/reyfm-hits/",
+    "Lo-Fi": "https://listen.reyfm.de/reyfm-lofi/"
+  };
+  
+  // Convert to array for easier navigation
+  const stations = Object.entries(streams).map(([name, url]) => ({
+    name,
+    url
+  }));
   
   // Populate station select
   stations.forEach(station => {
